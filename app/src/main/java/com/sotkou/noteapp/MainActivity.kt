@@ -58,9 +58,8 @@ class MainActivity : AppCompatActivity(), NoteClickInterface, NoteClickDeleteInt
         addFAB.setOnClickListener {
             // Ο click listener για το FAButton για την προσθήκη μιας νέας note.
             // Το intent οδηγεί σε AddEditNoteActivity για την προσθήκη μιας νέας note.
-            val intent = Intent(this@MainActivity, AddEditNoteActivity::class.java)
+            val intent = Intent(this, AddEditNoteActivity::class.java)
             startActivity(intent)
-            this.finish()
         }
     }
 
@@ -74,7 +73,6 @@ class MainActivity : AppCompatActivity(), NoteClickInterface, NoteClickDeleteInt
         intent.putExtra("noteDescription", note.noteDescription)
         intent.putExtra("noteId", note.id)
         startActivity(intent)
-        this.finish()
     }
 
     // όμοια
